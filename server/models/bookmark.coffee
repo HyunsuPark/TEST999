@@ -6,6 +6,9 @@ module.exports = Bookmark = cozydb.getModel 'Bookmark',
     url: String
     title: String
 
+Bookmark.all = (options, callback) ->
+  Bookmark.request 'all', options, callback
+
 Bookmark.byName = (options, callback) ->
   Bookmark.request 'byName', options, callback
 

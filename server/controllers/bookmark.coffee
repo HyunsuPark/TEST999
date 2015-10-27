@@ -1,7 +1,7 @@
 Bookmark = require '../models/bookmark'
 
 module.exports.all = (req, res, next) ->
-  Bookmark.byName (err, results) ->
+  Bookmark.all (err, results) ->
     return next err if err
 
     res.send 200, results
