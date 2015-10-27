@@ -1,0 +1,40 @@
+{
+  "name": "bookmarker-couchdb",
+  "version": "0.0.2",
+  "displayName": "bookmarker-couchdb",
+  "description": "Manage your Bookmark on couchdb use CozyDB Lib.",
+  "author": "512gbyte <512gbyte@gmail.com>",
+  "licenses": [
+    {
+      "type": "AGPL v3",
+      "url": "http://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  ],
+  "engines": [
+    "node = 0.10.x"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://1.234.69.71/TOPAS_App/bookmarker-couchdb.git"
+  },
+  "main": "server.coffee",
+  "dependencies": {
+    "americano": "0.4.2",
+    "async": "0.9.0",
+    "printit": "~0.1.8",
+    "jade": "~1.11.0",
+    "cozydb": "~0.1.1"
+  },
+  "scripts": {
+    "test": "cake --use-js tests",
+    "start": "node build/server.js",
+    "build:client": "cd client && brunch b",
+    "build:server": "cake build",
+    "build": "npm run build:client && npm run build:server"
+  },
+  "cozy-permissions": {
+    "bookmark": {
+      "description": "Create and edit your bookmarks."
+    }
+  }
+}
