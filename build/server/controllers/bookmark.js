@@ -4,7 +4,7 @@ var Bookmark;
 Bookmark = require('../models/bookmark');
 
 module.exports.all = function(req, res, next) {
-  return Bookmark.byName(function(err, results) {
+  return Bookmark.all(function(err, results) {
     if (err) {
       return next(err);
     }

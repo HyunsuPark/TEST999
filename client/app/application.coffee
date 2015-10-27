@@ -34,15 +34,15 @@ angular.module 'MyApp', ['ngRoute']
           title: $scope.bookmarkName
           url: $scope.bookmarkURL
       .success (reponseData) ->
-        $scope.getBookmarks() if reponseData.success
-    
+        $scope.getBookmarks()    
+
     $scope.removeBookmark = (poBookmark) ->
       $http
         url: 'bookmark/' + poBookmark.id
         method: 'post'
       .success (reponseData) ->
-        $scope.getBookmarks() if reponseData.success
-    
+        $scope.getBookmarks()    
+
     $scope.getBookmarks = () ->
       $http
         url: 'bookmark'

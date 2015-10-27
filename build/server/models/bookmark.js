@@ -12,6 +12,10 @@ module.exports = Bookmark = cozydb.getModel('Bookmark', {
   title: String
 });
 
+Bookmark.all = function(options, callback) {
+  return Bookmark.request('all', options, callback);
+};
+
 Bookmark.byName = function(options, callback) {
   return Bookmark.request('byName', options, callback);
 };

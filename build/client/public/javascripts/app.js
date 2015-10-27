@@ -142,9 +142,7 @@ angular.module('MyApp', ['ngRoute']).config([
           url: $scope.bookmarkURL
         }
       }).success(function(reponseData) {
-        if (reponseData.success) {
-          return $scope.getBookmarks();
-        }
+        return $scope.getBookmarks();
       });
     };
     $scope.removeBookmark = function(poBookmark) {
@@ -152,9 +150,7 @@ angular.module('MyApp', ['ngRoute']).config([
         url: 'bookmark/' + poBookmark.id,
         method: 'post'
       }).success(function(reponseData) {
-        if (reponseData.success) {
-          return $scope.getBookmarks();
-        }
+        return $scope.getBookmarks();
       });
     };
     $scope.getBookmarks = function() {
