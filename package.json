@@ -28,9 +28,9 @@
   "scripts": {
     "test": "cake --use-js tests",
     "start": "node build/server.js",
-    "build:client": "cd client && brunch b",
+    "build:client": "cd client && npm install && brunch b",
     "build:server": "cake build",
-    "build": "npm run build:client && npm run build:server"
+    "build": "npm install && npm run build:client && npm run build:server"
   },
   "cozy-permissions": {
     "bookmark": {
